@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <Button fx:id="buttonWarehouse" layoutX="43.0" layoutY="26.0" mnemonicParsing="false" onAction="#onButtonWarehouse" text="Склад" />
+      <Button fx:id="buttonProduct" layoutX="43.0" layoutY="71.0" mnemonicParsing="false" onAction="#onButtonProduct" text="Продукты" />
+      <Button fx:id="buttonCategory" layoutX="43.0" layoutY="114.0" mnemonicParsing="false" onAction="#onButtonCategory" text="Категории" />
+      <TableView fx:id="tableViewWarehouse" layoutX="133.0" layoutY="62.0" prefHeight="330.0" prefWidth="445.0" visible="false">
+        <columns>
+          <TableColumn fx:id="columnIdWarehouse" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="columnAdresWarehouse" prefWidth="75.0" text="adres" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewCategory" layoutX="133.0" layoutY="62.0" prefHeight="330.0" prefWidth="445.0" visible="false">
+        <columns>
+          <TableColumn fx:id="columnIdCategory" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="columnNameCategory" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="columnWarehouseCategory" prefWidth="87.0" text="warehouse_id" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewProduct" layoutX="141.0" layoutY="62.0" prefHeight="330.0" prefWidth="445.0" visible="false">
+        <columns>
+          <TableColumn fx:id="columnIdProduct" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="columnTitleProduct" prefWidth="75.0" text="title" />
+            <TableColumn fx:id="columnWarehouseProduct" prefWidth="92.0" text="warehouse_id" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonAddProduct" layoutX="133.0" layoutY="26.0" mnemonicParsing="false" text="Добавить" visible="false" />
+      <Button fx:id="buttonUpdateProduct" layoutX="210.0" layoutY="26.0" mnemonicParsing="false" text="Редактировать" visible="false" />
+      <Button fx:id="buttonDeleteProduct" layoutX="315.0" layoutY="26.0" mnemonicParsing="false" text="Удалить" visible="false" />
+      <Button fx:id="buttonAddWarehouse" layoutX="133.0" layoutY="26.0" mnemonicParsing="false" text="Добавить" visible="false" />
+      <Button fx:id="buttonUpdateWarehouse" layoutX="210.0" layoutY="26.0" mnemonicParsing="false" text="Редактировать" visible="false" />
+      <Button fx:id="buttonDeleteWarehouse" layoutX="315.0" layoutY="26.0" mnemonicParsing="false" text="Удалить" visible="false" />
+      <Button fx:id="buttonAddCategory" layoutX="133.0" layoutY="26.0" mnemonicParsing="false" text="Добавить" visible="false" />
+      <Button fx:id="buttonUpdateCategory" layoutX="210.0" layoutY="26.0" mnemonicParsing="false" text="Редактировать" visible="false" />
+      <Button fx:id="buttonDeleteCategory" layoutX="315.0" layoutY="26.0" mnemonicParsing="false" text="Удалить" visible="false" />
+      <TextField fx:id="txtSearchProduct" layoutX="375.0" layoutY="39.0" onAction="#searchProduct" prefHeight="25.0" prefWidth="210.0" visible="false" />
+      <TextField fx:id="txtSearchCategory" layoutX="375.0" layoutY="39.0" onAction="#searchCategory" prefHeight="25.0" prefWidth="210.0" visible="false" />
+      <TextField fx:id="txtSearchWarehouse" layoutX="377.0" layoutY="39.0" onAction="#searchWarehouse" prefHeight="25.0" prefWidth="210.0" visible="false" />
+   </children>
+</Pane>
